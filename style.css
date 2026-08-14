@@ -1,4 +1,4 @@
-/* Îáùèå ñáðîñû ñòèëåé */
+/* Общие сбросы стилей */
 * {
     margin: 0;
     padding: 0;
@@ -11,20 +11,36 @@ body {
     color: #ffffff;
     line-height: 1.6;
     padding-bottom: 60px;
+    position: relative;
+}
+
+/* Стили для заднего фона с частицами */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Уходит на самый задний план */
+    pointer-events: none; /* Чтобы точки не мешали нажимать на кнопки */
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Поднимает контент над частицами */
 }
 
-/* Øàïêà ñàéòà */
+/* Шапка сайта */
 .header {
-    background-color: #000000;
-    border-bottom: 1px solid #333333;
+    background-color: transparent; /* Сделали прозрачным, чтобы видеть частицы */
+    border-bottom: 1px solid #222222;
     padding: 40px 0;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .logo {
@@ -42,9 +58,11 @@ body {
     letter-spacing: 1px;
 }
 
-/* Ãëàâíûé êîíòåíò */
+/* Главный контент */
 .main-content {
     padding: 40px 0;
+    position: relative;
+    z-index: 2;
 }
 
 .category-section {
@@ -60,19 +78,19 @@ body {
     letter-spacing: 1px;
 }
 
-/* Ñåòêà êàðòî÷åê */
+/* Сетка карточек */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-/* Êàðòî÷êè */
+/* Карточки */
 .card {
-    background-color: #111111;
+    background-color: rgba(17, 17, 17, 0.85); /* Слегка прозрачный фон для глубины */
     border: 1px solid #222222;
     padding: 25px;
-    border-radius: 0px; /* Ñòðîãèå êâàäðàòíûå óãëû */
+    border-radius: 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -81,7 +99,7 @@ body {
 
 .card:hover {
     border-color: #ffffff;
-    background-color: #161616;
+    background-color: rgba(22, 22, 22, 0.95);
 }
 
 .card h3 {
@@ -97,22 +115,7 @@ body {
     flex-grow: 1;
 }
 
-/* Ïðåìèóì/Ïðèîðèòåòíàÿ êàðòî÷êà */
-.card.premium {
-    border: 1px dashed #ffffff;
-}
-
-.badge {
-    display: inline-block;
-    background: #222222;
-    color: #ffffff;
-    padding: 3px 8px;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    width: fit-content;
-}
-
-/* Êíîïêè */
+/* Кнопки */
 .btn {
     display: inline-block;
     text-align: center;
@@ -125,24 +128,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 3;
 }
 
 .btn:hover {
     background-color: #cccccc;
 }
 
-.btn-dark {
-    background-color: #000000;
-    color: #ffffff;
-    border: 1px solid #ffffff;
-}
-
-.btn-dark:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Ïîäâàë */
+/* Подвал */
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -150,11 +144,11 @@ body {
     font-size: 0.8rem;
     border-top: 1px solid #111111;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    z-index: 2;
+    background-color: #000000;
 }
 
-/* Àäàïòèâíîñòü äëÿ ìîáèëüíûõ óñòðîéñòâ */
+/* Адаптивность */
 @media (max-width: 600px) {
     .logo { font-size: 1.8rem; }
     .grid { grid-template-columns: 1fr; }
