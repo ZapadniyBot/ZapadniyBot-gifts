@@ -1,0 +1,161 @@
+/* Общие сбросы стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+    padding-bottom: 60px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Шапка сайта */
+.header {
+    background-color: #000000;
+    border-bottom: 1px solid #333333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #888888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Главный контент */
+.main-content {
+    padding: 40px 0;
+}
+
+.category-section {
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 1.5rem;
+    border-left: 4px solid #ffffff;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Сетка карточек */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Карточки */
+.card {
+    background-color: #111111;
+    border: 1px solid #222222;
+    padding: 25px;
+    border-radius: 0px; /* Строгие квадратные углы */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: #ffffff;
+    background-color: #161616;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Премиум/Приоритетная карточка */
+.card.premium {
+    border: 1px dashed #ffffff;
+}
+
+.badge {
+    display: inline-block;
+    background: #222222;
+    color: #ffffff;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cccccc;
+}
+
+.btn-dark {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    color: #555555;
+    font-size: 0.8rem;
+    border-top: 1px solid #111111;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+    .logo { font-size: 1.8rem; }
+    .grid { grid-template-columns: 1fr; }
+}
