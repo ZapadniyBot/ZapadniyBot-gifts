@@ -1,4 +1,4 @@
-/* Общие сбросы стилей */
+/* ГЋГЎГ№ГЁГҐ Г±ГЎГ°Г®Г±Г» Г±ГІГЁГ«ГҐГ© */
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     margin: 0 auto;
 }
 
-/* Шапка сайта */
+/* ГГ ГЇГЄГ  Г±Г Г©ГІГ  */
 .header {
     background-color: #000000;
     border-bottom: 1px solid #333333;
@@ -42,7 +42,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* Главный контент */
+/* ГѓГ«Г ГўГ­Г»Г© ГЄГ®Г­ГІГҐГ­ГІ */
 .main-content {
     padding: 40px 0;
 }
@@ -60,19 +60,19 @@ body {
     letter-spacing: 1px;
 }
 
-/* Сетка карточек */
+/* Г‘ГҐГІГЄГ  ГЄГ Г°ГІГ®Г·ГҐГЄ */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
-/* Карточки */
+/* ГЉГ Г°ГІГ®Г·ГЄГЁ */
 .card {
     background-color: #111111;
     border: 1px solid #222222;
     padding: 25px;
-    border-radius: 0px; /* Строгие квадратные углы */
+    border-radius: 0px; /* Г‘ГІГ°Г®ГЈГЁГҐ ГЄГўГ Г¤Г°Г ГІГ­Г»ГҐ ГіГЈГ«Г» */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +86,7 @@ body {
 
 .card h3 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 
@@ -97,7 +97,7 @@ body {
     flex-grow: 1;
 }
 
-/* Премиум/Приоритетная карточка */
+/* ГЏГ°ГҐГ¬ГЁГіГ¬/ГЏГ°ГЁГ®Г°ГЁГІГҐГІГ­Г Гї ГЄГ Г°ГІГ®Г·ГЄГ  */
 .card.premium {
     border: 1px dashed #ffffff;
 }
@@ -112,7 +112,7 @@ body {
     width: fit-content;
 }
 
-/* Кнопки */
+/* ГЉГ­Г®ГЇГЄГЁ */
 .btn {
     display: inline-block;
     text-align: center;
@@ -142,7 +142,7 @@ body {
     color: #000000;
 }
 
-/* Подвал */
+/* ГЏГ®Г¤ГўГ Г« */
 .footer {
     text-align: center;
     padding: 20px 0;
@@ -154,7 +154,7 @@ body {
     width: 100%;
 }
 
-/* Адаптивность для мобильных устройств */
+/* ГЂГ¤Г ГЇГІГЁГўГ­Г®Г±ГІГј Г¤Г«Гї Г¬Г®ГЎГЁГ«ГјГ­Г»Гµ ГіГ±ГІГ°Г®Г©Г±ГІГў */
 @media (max-width: 600px) {
     .logo { font-size: 1.8rem; }
     .grid { grid-template-columns: 1fr; }
